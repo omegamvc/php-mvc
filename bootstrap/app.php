@@ -6,7 +6,7 @@ use App\Kernels\Http;
 use Dotenv\Dotenv;
 use System\Application\Application;
 use System\Integrate\Console\Kernel as ConsoleKernel;
-use System\Integrate\Exceptions\Handler as ExceptionsHandler;
+use System\Exceptions\Handler as ExceptionsHandler;
 use System\Integrate\Http\Kernel as HttpKernel;
 
 Dotenv::createImmutable(dirname(__DIR__))->load();
