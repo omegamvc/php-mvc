@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/phpDocumentor/phpDocumentor/master/data/xsd/phpdoc.xsd"
+>
+    <title>Omega API</title>
+    <setting name="guides.enabled" value="false"/>
+    <paths>
+        <output>cache/apiDoc</output>
+        <cache>cache/phpdoc</cache>
+    </paths>
+    <version number="3.5.3">
+        <api>
+            <source dsn=".">
+                <path>app</path>
+                <path>vendor/omegamvc</path>
+            </source>
+            <visibility>public</visibility>
+            <visibility>private</visibility>
+            <visibility>protected</visibility>
+            <default-package-name>Omega</default-package-name>
+        </api>
+    </version>
+</phpdocumentor>

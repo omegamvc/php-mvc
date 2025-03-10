@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require_once './vendor/autoload.php';
+
+// call CLI
+$app = require_once __DIR__ . '/bootstrap/init.php';
+
+$out = $app->make(System\Integrate\Console\Karnel::class);
+
+$handle = $out->handle($argv);
+
+exit($handle);
+
