@@ -8,7 +8,7 @@ use DI\DependencyException;
 use DI\NotFoundException;
 use System\Http\Response;
 use System\Integrate\ServiceProvider;
-use System\Integrate\Vite;
+use System\Support\Vite;
 use System\View\Templator;
 use System\View\TemplatorFinder;
 
