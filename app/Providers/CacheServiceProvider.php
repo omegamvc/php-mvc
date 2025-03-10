@@ -9,10 +9,11 @@ use System\Cache\Storage\ArrayStorage;
 use System\Cache\Storage\FileStorage;
 use System\Integrate\ServiceProvider;
 use System\Support\Facades\Config;
+use function compiled_view_path;
 
 class CacheServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $config = Config::get('CACHE_STORAGE', 'file');
         $cache  = match (true) {
@@ -23,7 +24,7 @@ class CacheServiceProvider extends ServiceProvider
 
         $this->app->set(
             'cache.file',
-            fn (): FileStorage => new FileStorage(cache_path(), 3_600)
+            fn (): FileStorage => new FileStorage(compiled_view_path(), 3_600)
         );
 
         $this->app->set(

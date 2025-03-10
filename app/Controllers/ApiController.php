@@ -1,18 +1,33 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controllers;
 
 use System\Http\Response;
 
+use function app;
+use function array_key_exists;
+use function file_exists;
+use function method_exists;
+use function services_path;
+use function str_replace;
+
 class ApiController extends Controller
 {
+    /**
+     * @param string $unit
+     * @param string $action
+     * @param string $version
+     * @return Response
+     */
     public function index(string $unit, string $action, string $version): Response
     {
-        /** @var array<string, int|string|array<string, string>> */
+        /** @var array<string, int|string|array<string, string>> $api */
         $api = $this->getService($unit, $action, $version);
 
         $status   = array_key_exists('code', $api) ? (int) $api['code'] : 200;
-        /** @var array<string, string> */
+        /** @var array<string, string> $header */
         $header   = array_key_exists('headers', $api) ? $api['headers'] : [];
         unset($api['headers']);
         $response = new Response($api, $status);
@@ -30,21 +45,24 @@ class ApiController extends Controller
     }
 
     /**
+     * @param string $serviceName
+     * @param string $methodName
+     * @param string $version
      * @return array<string, mixed>
      */
-    protected function getService(string $service_nama, string $method_nama, string $version): array
+    protected function getService(string $serviceName, string $methodName, string $version): array
     {
-        $service_nama .= 'Service';
-        $service_nama = str_replace('-', '', $service_nama);
-        $method_nama  = str_replace('-', '_', $method_nama);
+        $serviceName .= 'Service';
+        $serviceName  = str_replace('-', '', $serviceName);
+        $methodName   = str_replace('-', '_', $methodName);
 
-        if (file_exists(services_path($service_nama . '.php'))) {
-            $service = new $service_nama();
-            if (method_exists($service, $method_nama)) {
-                /** @var array<string, mixed> Call target services */
-                $result_wrap = app()->call([$service, $method_nama], ['version' => $version]);
+        if (file_exists(services_path($serviceName . '.php'))) {
+            $service = new $serviceName();
+            if (method_exists($service, $methodName)) {
+                /** @var array<string, mixed> $resultWrap */
+                $resultWrap = app()->call([$service, $methodName], ['version' => $version]);
 
-                return $result_wrap;
+                return $resultWrap;
             }
 
             // method not found
@@ -53,7 +71,7 @@ class ApiController extends Controller
                 'code'    => 400,
                 'error'   => [
                     'server'  => 'Bad Request',
-                    'leyer'   => 1,
+                    'layer'   => 1,
                 ],
                 'headers' => ['HTTP/1.1 400 Bad Request'],
             ];
@@ -65,7 +83,7 @@ class ApiController extends Controller
             'code'    => 404,
             'error'   => [
                 'server'  => 'Service Not Found',
-                'leyer'   => 1,
+                'layer'   => 1,
             ],
             'headers' => ['HTTP/1.1 404 Service Not Found'],
         ];

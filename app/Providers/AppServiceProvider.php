@@ -13,17 +13,22 @@ use System\Security\Hashing\BcryptHasher;
 use System\Security\Hashing\DefaultHasher;
 use System\Security\Hashing\HashManager;
 use System\Support\Facades\Config;
+use Whoops\Handler\PlainTextHandler;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
+
+use function now;
 
 class AppServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         // error handle
-        $this->app->set('error.handle', fn () => new \Whoops\Run());
-        $this->app->set('error.PrettyPageHandler', fn () => new \Whoops\Handler\PrettyPageHandler());
-        $this->app->set('error.PlainTextHandler', fn () => new \Whoops\Handler\PlainTextHandler());
+        $this->app->set('error.handle', fn () => new Run());
+        $this->app->set('error.PrettyPageHandler', fn () => new PrettyPageHandler());
+        $this->app->set('error.PlainTextHandler', fn () => new PlainTextHandler());
 
-        // register schedule to containel
+        // register schedule to contained
         $this->app->set('cron.log', fn (): Log => new Log());
         $this->app->set('schedule', fn (): Schedule => new Schedule(now()->timestamp, $this->app['cron.log']));
 

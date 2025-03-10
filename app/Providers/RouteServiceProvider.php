@@ -8,9 +8,11 @@ use App\Middlewares\AppMiddleware;
 use System\Integrate\ServiceProvider;
 use System\Router\Router;
 
+use function base_path;
+
 class RouteServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         Router::middleware([
             // middleware

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Commands;
 
 use App\Commands\Cron\Log;
@@ -14,6 +16,7 @@ class CronCommand extends ConsoleCronCommand
     public function __construct($argv, $default_option = [])
     {
         parent::__construct($argv, $default_option);
+
         $this->log = new Log();
     }
 

@@ -4,26 +4,29 @@ declare(strict_types=1);
 
 namespace App\Kernels;
 
-use System\Integrate\Application;
-use System\Integrate\Console\Karnel as Kernel;
+use System\Application\Application;
+use System\Integrate\Console\Kernel;
+use Whoops\Handler\Handler;
+use Whoops\Handler\PlainTextHandler;
+use Whoops\Run;
 
-class ConsoleKernel extends Kernel
+class Cli extends Kernel
 {
-    /** @var \Whoops\Run */
-    private $run;
+    /** @var Run */
+    private Run $run;
 
-    /** @var \Whoops\Handler */
-    private $handler;
+    /** @var Handler */
+    private Handler $handler;
 
     public function __construct(Application $app)
     {
         parent::__construct($app);
 
         $this->app->bootedCallback(function () {
-            /* @var \Whoops\Handler\PlainTextHandler */
+            /* @var PlainTextHandler $handler */
             $this->handler = $this->app->make('error.PlainTextHandler');
 
-            /* @var \Whoops\Run */
+            /* @var Run $run */
             $this->run = $this->app->make('error.handle');
             $this->run
               ->pushHandler($this->handler)

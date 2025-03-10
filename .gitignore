@@ -29,3 +29,6 @@ composer.lock
 # Logs
 npm-debug.log
 yarn-error.log
+
+# Dev
+DaFare.txt
