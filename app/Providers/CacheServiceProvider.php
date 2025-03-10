@@ -7,11 +7,12 @@ namespace App\Providers;
 use System\Cache\CacheManager;
 use System\Cache\Storage\ArrayStorage;
 use System\Cache\Storage\FileStorage;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Support\Facades\Config;
+
 use function compiled_view_path;
 
-class CacheServiceProvider extends ServiceProvider
+class CacheServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {

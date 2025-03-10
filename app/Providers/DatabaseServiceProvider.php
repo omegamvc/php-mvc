@@ -6,12 +6,12 @@ namespace App\Providers;
 
 use DI\DependencyException;
 use DI\NotFoundException;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Database\MyPDO;
 use System\Database\MyQuery;
 use System\Database\MySchema;
-use System\Integrate\ServiceProvider;
 
-class DatabaseServiceProvider extends ServiceProvider
+class DatabaseServiceProvider extends AbstractServiceProvider
 {
     /**
      * @throws DependencyException

@@ -6,7 +6,7 @@ namespace App\Providers;
 
 use App\Commands\Cron\Log;
 use System\Cron\Schedule;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Security\Hashing\Argon2IdHasher;
 use System\Security\Hashing\ArgonHasher;
 use System\Security\Hashing\BcryptHasher;
@@ -19,7 +19,7 @@ use Whoops\Run;
 
 use function now;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {

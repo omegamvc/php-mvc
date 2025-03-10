@@ -7,7 +7,7 @@ namespace App\Providers;
 use DI\DependencyException;
 use DI\NotFoundException;
 use System\Http\Response;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Support\Vite;
 use System\View\Templator;
 use System\View\TemplatorFinder;
@@ -17,7 +17,7 @@ use function compiled_view_path;
 use function file_exists;
 use function view_paths;
 
-class ViewServiceProvider extends ServiceProvider
+class ViewServiceProvider extends AbstractServiceProvider
 {
     /**
      * @throws DependencyException
