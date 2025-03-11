@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use System\Application\Application;
-use System\Integrate\Console\Kernel;
+use System\Console\Kernel;
 use Whoops\Handler\Handler;
 use Whoops\Handler\PlainTextHandler;
 use Whoops\Run;

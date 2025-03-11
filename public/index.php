@@ -6,7 +6,7 @@ use DI\DependencyException;
 use DI\NotFoundException;
 use System\Http\RequestFactory;
 use System\Application\Application;
-use System\Integrate\Http\Kernel;
+use System\Http\Kernel;
 
 if (file_exists($maintenance = dirname(__DIR__) . '/storage/app/maintenance.php')) {
     require $maintenance;
