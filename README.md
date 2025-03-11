@@ -1,8 +1,6 @@
 # PHP MVC
 Welcome to **php-mvc**, a minimal MVC framework designed to streamline your PHP development process. This lightweight framework offers essential features for building web applications while maintaining simplicity and ease of use.
 
-> php-library version 0.33 now end support for php 7.4. If you strill using php 7.4 use php-library 0.32.x, this version still accept bug and security update (small feature for improving performance).
-
 ## Feature
 - MVC structure
 - Application Container (power with [php-di](https://github.com/PHP-DI/PHP-DI))
@@ -130,7 +128,3 @@ php cli view:cache
 # cache application config
 php cli config:cache
 ```
-
-## License
-
-php-mvc is open-source software licensed under the **[MIT license](https://opensource.org/licenses/MIT)**.
