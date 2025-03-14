@@ -2,9 +2,8 @@
 .env
 
 # Cache
-.php-cs-fixer.cache
-.phpunit.result.cache
-/.phpunit.cache
+cache/
+
 
 # Build output
 /public/build

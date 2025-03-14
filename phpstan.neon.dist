@@ -1,10 +1,12 @@
 parameters:
-	level: 9
-	paths:
-		- app/Http
-		- app/Models
-		- app/Exception
-		- routes
-		- tests
-		- vendor/omegamvc
-	tmpDir: cache/phpstan
+    level: 10
+    paths:
+        - app/Http
+        - app/Models
+        - app/Exception
+        - routes
+        - tests
+        - vendor/omegamvc
+    tmpDir: cache/phpstan
+    ignoreErrors:
+        - '#Method System\\Collection\\AbstractCollectionImmutable::pluck\(\) should return#'
