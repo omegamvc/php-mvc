@@ -11,7 +11,9 @@ use System\Http\Kernel as HttpKernel;
 
 Dotenv::createImmutable(dirname(__DIR__))->load();
 
-$app = new Application(dirname(__DIR__));
+$app = Application::getInstance(
+    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
+);
 
 $app->set(
     HttpKernel::class,
