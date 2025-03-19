@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
+use DI\DependencyException;
+use DI\NotFoundException;
 use System\Http\Response;
 
-use function app;
 use function array_key_exists;
 use function file_exists;
 use function method_exists;
-use function services_path;
 use function str_replace;
+use function System\Application\app;
+use function System\Application\services_path;
 
 class ApiController extends Controller
 {
@@ -20,6 +22,8 @@ class ApiController extends Controller
      * @param string $action
      * @param string $version
      * @return Response
+     * @throws DependencyException
+     * @throws NotFoundException
      */
     public function index(string $unit, string $action, string $version): Response
     {
@@ -49,6 +53,8 @@ class ApiController extends Controller
      * @param string $methodName
      * @param string $version
      * @return array<string, mixed>
+     * @throws DependencyException
+     * @throws NotFoundException
      */
     protected function getService(string $serviceName, string $methodName, string $version): array
     {

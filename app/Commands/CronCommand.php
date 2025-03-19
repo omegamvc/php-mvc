@@ -13,9 +13,9 @@ use System\Time\Now;
 
 class CronCommand extends ConsoleCronCommand
 {
-    public function __construct($argv, $default_option = [])
+    public function __construct($argv, $defaultOption = [])
     {
-        parent::__construct($argv, $default_option);
+        parent::__construct($argv, $defaultOption);
 
         $this->log = new Log();
     }

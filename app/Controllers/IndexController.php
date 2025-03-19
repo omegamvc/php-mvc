@@ -6,6 +6,8 @@ namespace App\Controllers;
 
 use System\Http\Response;
 
+use function System\Application\view;
+
 class IndexController extends Controller
 {
     public function index(): Response

@@ -1,6 +1,6 @@
 {
     "name": "omegamvc/php-mvc",
-    "description": "Very light php mvc, include cli easier to creat controller view and model quickly ",
+    "description": "Very light php mvc, include cli easier to create controller view and model quickly ",
     "type": "project",
     "license": "GPL-3.0-or-later",
     "authors": [
@@ -11,6 +11,12 @@
     ],
     "require": {
         "php": "^8.3",
+        "ext-http": "*",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-pcntl": "*",
+        "ext-posix": "*",
+        "ext-readline": "*",
         "omegamvc/php-library": "^1.0.0",
         "vlucas/phpdotenv": "^5.6.1",
         "react/event-loop": "^1.5.0"

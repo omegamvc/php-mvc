@@ -8,17 +8,18 @@ use System\Application\Application;
 use System\Http\Kernel;
 use System\Router\RouteDispatcher;
 use System\Router\Router;
-use Whoops\Handler\Handler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
+
+use function System\Application\view;
 
 class Http extends Kernel
 {
     /** @var Run */
     private Run $run;
 
-    /** @var Handler */
-    private Handler $handler;
+    /** @var PrettyPageHandler */
+    private PrettyPageHandler $handler;
 
     public function __construct(Application $app)
     {
@@ -26,7 +27,7 @@ class Http extends Kernel
 
         $this->app->bootedCallback(function () {
             if ($this->app->isDebugMode()) {
-                /* @var PrettyPageHandler $handler */
+                /** @var PrettyPageHandler $handler */
                 $this->handler = $this->app->make('error.PrettyPageHandler');
                 $this->handler->setPageTitle('php mvc');
 

@@ -6,7 +6,6 @@ namespace App\Kernels;
 
 use System\Application\Application;
 use System\Console\Kernel;
-use Whoops\Handler\Handler;
 use Whoops\Handler\PlainTextHandler;
 use Whoops\Run;
 
@@ -15,8 +14,8 @@ class Cli extends Kernel
     /** @var Run */
     private Run $run;
 
-    /** @var Handler */
-    private Handler $handler;
+    /** @var PlainTextHandler */
+    private PlainTextHandler $handler;
 
     public function __construct(Application $app)
     {

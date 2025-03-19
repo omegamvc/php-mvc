@@ -10,18 +10,19 @@ use System\Cache\Storage\FileStorage;
 use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Support\Facades\Config;
 
-use function compiled_view_path;
+use function System\Application\compiled_view_path;
 
 class CacheServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {
         $config = Config::get('CACHE_STORAGE', 'file');
-        $cache  = match (true) {
+        $cache = $config === 'array' ? 'cache.array' : 'cache.file';
+        /**$cache  = match (true) {
             $config === 'file'  => 'cache.file',
             $config === 'array' => 'cache.array',
             default             => 'cache.file',
-        };
+        };*/
 
         $this->app->set(
             'cache.file',

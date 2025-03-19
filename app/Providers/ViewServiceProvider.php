@@ -13,9 +13,9 @@ use System\View\Templator;
 use System\View\TemplatorFinder;
 
 use function array_merge;
-use function compiled_view_path;
 use function file_exists;
-use function view_paths;
+use function System\Application\compiled_view_path;
+use function System\Application\view_paths;
 
 class ViewServiceProvider extends AbstractServiceProvider
 {
