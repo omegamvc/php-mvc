@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\Middlewares\AppMiddleware;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Router\Router;
 
-class RouteServiceProvider extends ServiceProvider
+class RouteServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         Router::middleware([
             // middleware

@@ -7,12 +7,12 @@ namespace App\Providers;
 use System\Cache\CacheManager;
 use System\Cache\Storage\ArrayStorage;
 use System\Cache\Storage\FileStorage;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Support\Facades\Config;
 
-class CacheServiceProvider extends ServiceProvider
+class CacheServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $config = Config::get('CACHE_STORAGE', 'file');
         $cache  = match (true) {

@@ -4,15 +4,23 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use System\Container\Exception\DependencyResolutionException;
+use System\Container\Exception\ServiceNotFoundException;
 use System\Http\Response\Response;
-use System\Integrate\ServiceProvider;
-use System\Integrate\Vite;
+use System\Container\ServiceProvider\AbstractServiceProvider;
+use System\Support\Vite;
 use System\View\Templator;
 use System\View\TemplatorFinder;
 
-class ViewServiceProvider extends ServiceProvider
+use function array_merge;
+
+class ViewServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    /**
+     * @throws ServiceNotFoundException
+     * @throws DependencyResolutionException
+     */
+    public function boot(): void
     {
         $this->registerViteResolver();
         $this->registerViewResolver();
@@ -25,6 +33,10 @@ class ViewServiceProvider extends ServiceProvider
         $this->app->set('vite.hasManifest', fn (): bool => file_exists($this->app->get('vite.location')));
     }
 
+    /**
+     * @throws ServiceNotFoundException
+     * @throws DependencyResolutionException
+     */
     protected function registerViewResolver(): void
     {
         $global_template_var = [

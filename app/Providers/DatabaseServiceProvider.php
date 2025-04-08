@@ -4,15 +4,21 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use System\Container\Exception\DependencyResolutionException;
+use System\Container\Exception\ServiceNotFoundException;
 use System\Database\Connection;
 use System\Database\Query\Query;
 use System\Database\Schema\SchemaConnection;
 use System\Database\Schema\Schema;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 
-class DatabaseServiceProvider extends ServiceProvider
+class DatabaseServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    /**
+     * @throws ServiceNotFoundException
+     * @throws DependencyResolutionException
+     */
+    public function boot(): void
     {
         $configs = $this->app->get('config');
         $sql_dsn = [

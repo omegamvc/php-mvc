@@ -6,24 +6,27 @@ namespace App\Providers;
 
 use App\Commands\Cron\Log;
 use System\Cron\Schedule;
-use System\Integrate\ServiceProvider;
+use System\Container\ServiceProvider\AbstractServiceProvider;
 use System\Security\Hashing\Argon2IdHasher;
 use System\Security\Hashing\ArgonHasher;
 use System\Security\Hashing\BcryptHasher;
 use System\Security\Hashing\DefaultHasher;
 use System\Security\Hashing\HashManager;
 use System\Support\Facades\Config;
+use Whoops\Handler\PlainTextHandler;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         // error handle
-        $this->app->set('error.handle', fn () => new \Whoops\Run());
-        $this->app->set('error.PrettyPageHandler', fn () => new \Whoops\Handler\PrettyPageHandler());
-        $this->app->set('error.PlainTextHandler', fn () => new \Whoops\Handler\PlainTextHandler());
+        $this->app->set('error.handle', fn () => new Run());
+        $this->app->set('error.PrettyPageHandler', fn () => new PrettyPageHandler());
+        $this->app->set('error.PlainTextHandler', fn () => new PlainTextHandler());
 
-        // register schedule to containel
+        // register schedule to container
         $this->app->set('cron.log', fn (): Log => new Log());
         $this->app->set('schedule', fn (): Schedule => new Schedule(now()->timestamp, $this->app['cron.log']));
 
