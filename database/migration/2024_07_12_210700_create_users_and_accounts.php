@@ -1,6 +1,6 @@
 <?php
 
-use System\Database\MySchema\Table\Create;
+use System\Database\Schema\Table\Create;
 use System\Support\Facades\Schema;
 
 return [

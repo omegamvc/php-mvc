@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use System\Database\MyPDO;
-use System\Database\MyQuery;
-use System\Database\MySchema;
+use System\Database\Connection;
+use System\Database\Query\Query;
+use System\Database\Schema\SchemaConnection;
+use System\Database\Schema\Schema;
 use System\Integrate\ServiceProvider;
 
 class DatabaseServiceProvider extends ServiceProvider
@@ -24,23 +25,23 @@ class DatabaseServiceProvider extends ServiceProvider
         $this->app->set('dsn.sql', $sql_dsn);
 
         $this->app->set(
-            MyPDO::class,
-            fn () => new MyPDO($sql_dsn)
+            Connection::class,
+            fn () => new Connection($sql_dsn)
         );
 
         $this->app->set(
-            MySchema\MyPDO::class,
-            fn () => new MySchema\MyPDO($sql_dsn)
+            SchemaConnection::class,
+            fn () => new SchemaConnection($sql_dsn)
         );
 
         $this->app->set(
-            'MyQuery',
-            fn () => new MyQuery($this->app->get(MyPDO::class))
+            'Query',
+            fn () => new Query($this->app->get(Connection::class))
         );
 
         $this->app->set(
-            'MySchema',
-            fn () => new MySchema($this->app->get(MySchema\MyPDO::class))
+            'Schema',
+            fn () => new Schema($this->app->get(SchemaConnection::class))
         );
     }
 }

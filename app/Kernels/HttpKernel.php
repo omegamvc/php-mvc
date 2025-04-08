@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use System\Application\Application;
-use System\Integrate\Http\Kernel as Kernel;
+use System\Http\Kernel as Kernel;
 use System\Router\RouteDispatcher;
 use System\Router\Router;
 

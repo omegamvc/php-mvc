@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use System\Http\Response;
+use System\Http\Response\Response;
 use System\Integrate\ServiceProvider;
 use System\Integrate\Vite;
 use System\View\Templator;

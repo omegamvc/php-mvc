@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use System\Database\MyModel\Model;
+use System\Database\Model\Model;
 
 /**
  * @property string|null $user

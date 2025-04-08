@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use System\Integrate\Testing\TestCase as IntegrateTastCase;
+use System\Testing\TestCase as IntegrateTastCase;
 use Tests\CreateApplication;
 
 abstract class TestCase extends IntegrateTastCase

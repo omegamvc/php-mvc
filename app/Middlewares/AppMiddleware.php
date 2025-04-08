@@ -2,8 +2,8 @@
 
 namespace App\Middlewares;
 
-use System\Http\Request;
-use System\Http\Response;
+use System\Http\Request\Request;
+use System\Http\Response\Response;
 
 class AppMiddleware
 {

@@ -14,7 +14,8 @@
         "ext-http": "*",
         "omegamvc/php-library": "^2.0.0",
         "vlucas/phpdotenv": "^5.6",
-        "react/event-loop": "^1.5"
+        "react/event-loop": "^1.5",
+        "ext-pdo": "*"
     },
     "require-dev": {
         "filp/whoops": "^2.15"

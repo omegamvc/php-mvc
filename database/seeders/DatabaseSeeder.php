@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use System\Database\Seeder\Seeder;
+use System\Database\Seeder\AbstractSeeder;
 
-class DatabaseSeeder extends Seeder
+class DatabaseSeeder extends AbstractSeeder
 {
     public function run(): void
     {

@@ -1,9 +1,3 @@
-<p align="center">
-<a href="https://packagist.org/packages/sonypradana/php-mvc"><img src="https://img.shields.io/packagist/dt/sonypradana/php-mvc" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/sonypradana/php-mvc"><img src="https://img.shields.io/packagist/v/sonypradana/php-mvc" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/sonypradana/php-mvc"><img src="https://img.shields.io/packagist/l/sonypradana/php-mvc" alt="License"></a>
-</p>
-
 # PHP MVC
 Welcome to **php-mvc**, a minimal MVC framework designed to streamline your PHP development process. This lightweight framework offers essential features for building web applications while maintaining simplicity and ease of use.
 

@@ -9,12 +9,4 @@ return [
 
     'BCRYPT_ROUNDS'     => $_ENV['BCRYPT_ROUNDS'] ?? 12,
     'CONFIG_STORAGE'    => $_ENV['file'] ?? 'file',
-
-    'PROVIDERS'         => [
-        App\Providers\AppServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\DatabaseServiceProvider::class,
-        App\Providers\ViewServiceProvider::class,
-        App\Providers\CacheServiceProvider::class,
-    ],
 ];
