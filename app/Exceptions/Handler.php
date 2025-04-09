@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use System\Integrate\Exceptions\Handler as BaseHandler;
+use System\Exception\Handler as BaseHandler;
 
 class Handler extends BaseHandler
 {

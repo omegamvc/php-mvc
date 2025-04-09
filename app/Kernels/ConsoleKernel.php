@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use System\Application\Application;
-use System\Integrate\Console\Kernel as Kernel;
+use System\Console\Kernel as Kernel;
 
 class ConsoleKernel extends Kernel
 {

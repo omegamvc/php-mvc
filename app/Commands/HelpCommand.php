@@ -2,7 +2,7 @@
 
 namespace App\Commands;
 
-use System\Integrate\Console\HelpCommand as ConsoleHelpCommand;
+use System\Console\Commands\HelpCommand as ConsoleHelpCommand;
 
 class HelpCommand extends ConsoleHelpCommand
 {

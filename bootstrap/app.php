@@ -16,8 +16,8 @@ use App\Kernels\ConsoleKernel;
 use App\Kernels\HttpKernel;
 use Dotenv\Dotenv;
 use System\Application\Application;
-use System\Integrate\Console\Kernel as KernelConsole;
-use System\Integrate\Exceptions\Handler as ExceptionHandler;
+use System\Console\Kernel as KernelConsole;
+use System\Exception\Handler as ExceptionHandler;
 use System\Http\Kernel as KernelHttp;
 
 Dotenv::createImmutable(dirname(__DIR__))->safeLoad();
