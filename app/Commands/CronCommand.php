@@ -14,18 +14,19 @@ class CronCommand extends ConsoleCronCommand
     public function __construct($argv, $default_option = [])
     {
         parent::__construct($argv, $default_option);
+
         $this->log = new Log();
     }
 
     public static array $command = [
         [
-            'pattern'       => 'cron',
+            'pattern' => 'cron',
             'fn'            => [self::class, 'main'],
         ], [
-            'pattern'       => 'cron:list',
+            'pattern' => 'cron:list',
             'fn'            => [self::class, 'list'],
         ], [
-            'pattern'       => 'cron:work',
+            'pattern' => 'cron:work',
             'fn'            => [self::class, 'work'],
         ],
     ];

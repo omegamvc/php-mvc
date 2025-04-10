@@ -16,7 +16,7 @@
         "ext-pdo": "*",
         "omegamvc/php-library": "^2.0.0",
         "vlucas/phpdotenv": "^5.6",
-        "react/event-loop": "^1.5",
+        "react/event-loop": "^1.5"
     },
     "require-dev": {
         "filp/whoops": "^2.15"
@@ -26,8 +26,8 @@
             "App\\" : "app",
             "Database\\Seeders\\": "database/seeders/",
             "": [
-                "app/library/",
-                "app/services/"
+                "app/Library",
+                "app/Services"
             ]
         }
     },
