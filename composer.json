@@ -1,5 +1,5 @@
 {
-  "name": "sonypradana/php-mvc",
+  "name": "omegamvc/php-mvc",
   "description": "Very light php mvc, include cli easyer to creat controller view and model quikly ",
   "type": "project",
   "license": "MIT",
