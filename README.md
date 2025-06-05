@@ -143,6 +143,3 @@ php cli view:cache
 php cli config:cache
 ```
 
-## License
-
-This project is open-source software licensed under the [GNU General Public License v3.0](LICENSE).
