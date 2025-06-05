@@ -7,8 +7,14 @@ namespace App\Commands\Cron;
 use System\Cron\InterpolateInterface;
 use System\Support\Facades\DB;
 
+use function json_encode;
+use function now;
+
 class Log implements InterpolateInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function interpolate(string $message, array $context = []): void
     {
         DB::table('cron')

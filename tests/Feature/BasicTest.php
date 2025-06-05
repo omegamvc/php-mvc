@@ -1,15 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature;
 
 use Tests\TestCase;
 
-final class BasicTest extends TestCase
+class BasicTest extends TestCase
 {
     /**
-     * @test
+     * Test it can see welcome page.
+     *
+     * @return void
      */
-    public function it_can_see_welcome_page(): void
+    public function testItCanSeeWelcomePage(): void
     {
         $this
             ->get('/')

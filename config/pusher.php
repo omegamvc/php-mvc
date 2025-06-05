@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'PUSHER_APP_ID'      => $_ENV['PUSHER_APP_ID'] ?? '',
     'PUSHER_APP_KEY'     => $_ENV['PUSHER_APP_KEY'] ?? '',

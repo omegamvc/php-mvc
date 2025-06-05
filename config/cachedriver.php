@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'CACHE_STORAGE' => $_ENV['CACHE_STORAGE'] ?? 'file',
 

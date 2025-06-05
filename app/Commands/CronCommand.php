@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Commands;
 
 use App\Commands\Cron\Log;
@@ -9,11 +11,15 @@ use System\Cron\Schedule;
 use System\Integrate\Console\CronCommand as ConsoleCronCommand;
 use System\Time\Now;
 
+use function microtime;
+use function round;
+
 class CronCommand extends ConsoleCronCommand
 {
     public function __construct($argv, $default_option = [])
     {
         parent::__construct($argv, $default_option);
+
         $this->log = new Log();
     }
 
@@ -48,15 +54,15 @@ class CronCommand extends ConsoleCronCommand
                 ->push('Run cron at - ' . $time)->textDim()
                 ->push(' ' . $clock->hour . ':' . $clock->minute . ':' . $clock->second);
 
-            $watch_start = microtime(true);
+            $watchStart = microtime(true);
 
             $this->getSchedule()->execute();
 
-            $watch_end = round(microtime(true) - $watch_start, 3) * 1000;
+            $watchEnd = round(microtime(true) - $watchStart, 3) * 1000;
             $print
                 ->repeat(' ', 34 - $print->length())
                 ->push('-> ')->textDim()
-                ->push($watch_end . 'ms')->textYellow()
+                ->push($watchEnd . 'ms')->textYellow()
                 ->out()
             ;
         });

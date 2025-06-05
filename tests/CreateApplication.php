@@ -6,12 +6,12 @@ namespace Tests;
 
 use System\Integrate\Application;
 
+use function dirname;
+
 trait CreateApplication
 {
     public function createApplication(): Application
     {
-        $app = require dirname(__DIR__) . '/bootstrap/init.php';
-
-        return $app;
+        return require dirname(__DIR__) . '/bootstrap/app.php';
     }
 }

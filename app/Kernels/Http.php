@@ -5,16 +5,20 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use System\Integrate\Application;
-use System\Integrate\Http\Karnel as Kernel;
+use System\Integrate\Http\HttpKernel;
 use System\Router\RouteDispatcher;
 use System\Router\Router;
+use Whoops\Handler\Handler;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
-class HttpKernel extends Kernel
+class Http extends HttpKernel
 {
-    /** @var \Whoops\Run */
-    private $run;
-    /** @var \Whoops\Handler */
-    private $handler;
+    /** @var Run */
+    private Run $run;
+
+    /** @var Handler */
+    private Handler $handler;
 
     public function __construct(Application $app)
     {
@@ -22,11 +26,11 @@ class HttpKernel extends Kernel
 
         $this->app->bootedCallback(function () {
             if ($this->app->isDebugMode()) {
-                /* @var \Whoops\Handler\PrettyPageHandler */
+                /* @var PrettyPageHandler $handler */
                 $this->handler = $this->app->make('error.PrettyPageHandler');
                 $this->handler->setPageTitle('php mvc');
 
-                /* @var \Whoops\Run */
+                /* @var Run $run */
                 $this->run = $this->app->make('error.handle');
                 $this->run
                   ->pushHandler($this->handler)

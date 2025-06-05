@@ -1,9 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Exceptions;
 
-use System\Integrate\Exceptions\Handler as BaseHandler;
+use System\Integrate\Exceptions\ExceptionHandler;
 
-class Handler extends BaseHandler
+class Handler extends ExceptionHandler
 {
 }

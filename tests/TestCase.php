@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests;
 
 use System\Integrate\Testing\TestCase as IntegrateTastCase;
-use Tests\CreateApplication;
 
 abstract class TestCase extends IntegrateTastCase
 {

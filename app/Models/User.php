@@ -12,6 +12,9 @@ use System\Database\MyModel\Model;
  */
 class User extends Model
 {
-    protected string $table_name  = 'users';
-    protected string $primery_key = 'user';
+    /** @var string Holds the table name to use. */
+    protected string $tableName  = 'users';
+
+    /** @var string Holds the primary key to use. */
+    protected string $primaryKey = 'user';
 }

@@ -12,11 +12,10 @@ use System\Support\Facades\Config;
 
 class CacheServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $config = Config::get('CACHE_STORAGE', 'file');
         $cache  = match (true) {
-            $config === 'file'  => 'cache.file',
             $config === 'array' => 'cache.array',
             default             => 'cache.file',
         };

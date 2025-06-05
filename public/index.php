@@ -1,30 +1,32 @@
 <?php
 
+use DI\DependencyException;
+use DI\NotFoundException;
+use System\Http\RequestFactory;
+use System\Integrate\Application;
+use System\Integrate\Http\HttpKernel;
+
 if (file_exists($maintenance = dirname(__DIR__) . '/storage/app/maintenance.php')) {
     require $maintenance;
 }
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-/**
- * Load Application instan.
- *
- * @var System\Integrate\Applicationn
- */
-$app = require_once dirname(__DIR__) . '/bootstrap/init.php';
+/** @var Application $app Load the Application. */
+$app = require_once dirname(__DIR__) . '/bootstrap/app.php';
+
+/** @var HttpKernel $httpKernel Declare the HttpKernel. */
+try {
+    $httpKernel = $app->make(HttpKernel::class);
+} catch (DependencyException|NotFoundException $e) {
+    echo $e->getMessage();
+}
 
 /**
- * Declare http karnel.
- *
- * @var System\Integrate\Http\Karnel
+ * Handle Response from HttpKernel.
  */
-$karnel = $app->make(System\Integrate\Http\Karnel::class);
-
-/**
- * Handle Respone from httpkarnel.
- */
-$response = $karnel->handle(
-    $request = (new System\Http\RequestFactory())->getFromGloball()
+$response = $httpKernel->handle(
+    $request = (new RequestFactory())->getFromGlobal()
 )->send();
 
-$karnel->terminate($request, $response);
+$httpKernel->terminate($request, $response);

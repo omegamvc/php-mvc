@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'MAIL_DRIVER'       => $_ENV['MAIL_DRIVER'] ?? 'smtp',
     'MAIL_HOST'         => $_ENV['MAIL_HOST'] ?? '127.0.0.1',

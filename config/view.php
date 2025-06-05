@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'VIEW_PATHS' => [
         DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR,
