@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Seeders;
 
-use System\Database\Seeder\Seeder;
+use Omega\Database\Seeder\Seeder;
 
 class DatabaseSeeder extends Seeder
 {

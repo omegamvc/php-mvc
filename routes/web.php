@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use App\Controllers\IndexController;
-use System\Router\Router;
+use Omega\Router\Router;
 
 Router::get('/', [IndexController::class, 'index']);
 

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Commands\Cron;
 
-use System\Cron\InterpolateInterface;
-use System\Support\Facades\DB;
+use Omega\Cron\InterpolateInterface;
+use Omega\Support\Facades\DB;
 
 use function json_encode;
 use function now;

@@ -6,11 +6,11 @@ namespace App\Providers;
 
 use DI\DependencyException;
 use DI\NotFoundException;
-use System\Http\Response;
-use System\Integrate\ServiceProvider;
-use System\Integrate\Vite;
-use System\View\Templator;
-use System\View\TemplatorFinder;
+use Omega\Http\Response;
+use Omega\Integrate\ServiceProvider;
+use Omega\Integrate\Vite;
+use Omega\View\Templator;
+use Omega\View\TemplatorFinder;
 
 use function array_merge;
 use function file_exists;

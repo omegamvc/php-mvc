@@ -6,10 +6,10 @@ namespace App\Commands;
 
 use App\Commands\Cron\Log;
 use React\EventLoop\Loop;
-use System\Console\Style\Style;
-use System\Cron\Schedule;
-use System\Integrate\Console\CronCommand as ConsoleCronCommand;
-use System\Time\Now;
+use Omega\Console\Style\Style;
+use Omega\Cron\Schedule;
+use Omega\Integrate\Console\CronCommand as ConsoleCronCommand;
+use Omega\Time\Now;
 
 use function microtime;
 use function round;

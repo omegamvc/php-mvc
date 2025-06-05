@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Middlewares;
 
 use Closure;
-use System\Http\Request;
-use System\Http\Response;
+use Omega\Http\Request;
+use Omega\Http\Response;
 
 class AppMiddleware
 {

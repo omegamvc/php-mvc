@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use System\Integrate\Testing\TestCase as IntegrateTastCase;
+use Omega\Integrate\Testing\TestCase as IntegrateTastCase;
 
 abstract class TestCase extends IntegrateTastCase
 {

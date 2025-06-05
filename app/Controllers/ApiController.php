@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use System\Http\Response;
+use Omega\Http\Response;
 
 use function array_key_exists;
 use function file_exists;

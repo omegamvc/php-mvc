@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use System\Cache\CacheManager;
-use System\Cache\Storage\ArrayStorage;
-use System\Cache\Storage\FileStorage;
-use System\Integrate\ServiceProvider;
-use System\Support\Facades\Config;
+use Omega\Cache\CacheManager;
+use Omega\Cache\Storage\ArrayStorage;
+use Omega\Cache\Storage\FileStorage;
+use Omega\Integrate\ServiceProvider;
+use Omega\Support\Facades\Config;
 
 class CacheServiceProvider extends ServiceProvider
 {

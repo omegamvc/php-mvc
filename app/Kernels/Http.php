@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Kernels;
 
-use System\Integrate\Application;
-use System\Integrate\Http\HttpKernel;
-use System\Router\RouteDispatcher;
-use System\Router\Router;
+use Omega\Integrate\Application;
+use Omega\Integrate\Http\HttpKernel;
+use Omega\Router\RouteDispatcher;
+use Omega\Router\Router;
 use Whoops\Handler\Handler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;

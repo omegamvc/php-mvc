@@ -2,9 +2,9 @@
 
 use DI\DependencyException;
 use DI\NotFoundException;
-use System\Http\RequestFactory;
-use System\Integrate\Application;
-use System\Integrate\Http\HttpKernel;
+use Omega\Http\RequestFactory;
+use Omega\Integrate\Application;
+use Omega\Integrate\Http\HttpKernel;
 
 if (file_exists($maintenance = dirname(__DIR__) . '/storage/app/maintenance.php')) {
     require $maintenance;

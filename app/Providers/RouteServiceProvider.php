@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\Middlewares\AppMiddleware;
-use System\Integrate\ServiceProvider;
-use System\Router\Router;
+use Omega\Integrate\ServiceProvider;
+use Omega\Router\Router;
 
 class RouteServiceProvider extends ServiceProvider
 {

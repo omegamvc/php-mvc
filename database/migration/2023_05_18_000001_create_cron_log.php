@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use System\Database\MySchema\Table\Create;
-use System\Support\Facades\Schema;
+use Omega\Database\MySchema\Table\Create;
+use Omega\Support\Facades\Schema;
 
 return [
     'up' => [

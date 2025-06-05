@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use System\Integrate\Application;
+use Omega\Integrate\Application;
 
 use function dirname;
 

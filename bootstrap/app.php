@@ -6,10 +6,10 @@ use App\Exceptions\Handler;
 use App\Kernels\Cli;
 use App\Kernels\Http;
 use Dotenv\Dotenv;
-use System\Integrate\Application;
-use System\Integrate\Console\CliKernel;
-use System\Integrate\Exceptions\ExceptionHandler;
-use System\Integrate\Http\HttpKernel;
+use Omega\Integrate\Application;
+use Omega\Integrate\Console\CliKernel;
+use Omega\Integrate\Exceptions\ExceptionHandler;
+use Omega\Integrate\Http\HttpKernel;
 
 Dotenv::createImmutable(dirname(__DIR__))->load();
 

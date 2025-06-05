@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use System\Database\MyPDO;
-use System\Database\MyQuery;
-use System\Database\MySchema;
-use System\Integrate\ServiceProvider;
+use Omega\Database\MyPDO;
+use Omega\Database\MyQuery;
+use Omega\Database\MySchema;
+use Omega\Integrate\ServiceProvider;
 
 class DatabaseServiceProvider extends ServiceProvider
 {
