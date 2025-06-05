@@ -145,4 +145,4 @@ php cli config:cache
 
 ## License
 
-php-mvc is open-source software licensed under the **[MIT license](https://opensource.org/licenses/MIT)**.
+This project is open-source software licensed under the [GNU General Public License v3.0](LICENSE).
