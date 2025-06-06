@@ -1,12 +1,16 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
+use Omega\Integrate\Console\CliKernel;
+
 require_once './vendor/autoload.php';
 
 // call CLI
 $app = require_once __DIR__ . '/bootstrap/app.php';
 
-$out = $app->make(Omega\Integrate\Console\CliKernel::class);
+$out = $app->make(CliKernel::class);
 
 $handle = $out->handle($argv);
 
