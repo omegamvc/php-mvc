@@ -15,8 +15,8 @@ class BasicTest extends TestCase
      */
     public function testItCanSeeWelcomePage(): void
     {
-        $this
-            ->get('/')
-            ->assertOk();
+        $response = $this->get('/welcome');
+
+        $response->assertOk();
     }
 }
