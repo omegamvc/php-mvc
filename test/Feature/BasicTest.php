@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Feature;
+namespace Test\Feature;
 
-use Tests\TestCase;
+use Test\TestCase;
 
 class BasicTest extends TestCase
 {
