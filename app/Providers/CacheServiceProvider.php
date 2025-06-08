@@ -18,7 +18,7 @@ namespace App\Providers;
 use Omega\Cache\Cache;
 use Omega\Cache\Storage\ArrayStorage;
 use Omega\Cache\Storage\FileStorage;
-use Omega\Integrate\ServiceProvider;
+use Omega\Container\Provider\AbstractServiceProvider;
 use Omega\Support\Facades\Config;
 
 /**
@@ -43,7 +43,7 @@ use Omega\Support\Facades\Config;
  * @license   https://www.gnu.org/licenses/gpl-3.0-standalone.html     GPL V3.0+
  * @version   2.0.0
  */
-class CacheServiceProvider extends ServiceProvider
+class CacheServiceProvider extends AbstractServiceProvider
 {
     /**
      * {@inheritdoc}

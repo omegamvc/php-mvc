@@ -4,14 +4,22 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use DI\DependencyException;
+use DI\NotFoundException;
 use Omega\Database\MyPDO;
 use Omega\Database\MyQuery;
 use Omega\Database\MySchema;
-use Omega\Integrate\ServiceProvider;
+use Omega\Container\Provider\AbstractServiceProvider;
 
-class DatabaseServiceProvider extends ServiceProvider
+class DatabaseServiceProvider extends AbstractServiceProvider
 {
-    public function boot()
+    /**
+     * {@inheritdoc}
+     *
+     * @throws DependencyException
+     * @throws NotFoundException
+     */
+    public function boot(): void
     {
         $configs = $this->app->get('config');
         $sqlDsn  = [

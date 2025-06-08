@@ -6,7 +6,7 @@ namespace App\Providers;
 
 use App\Commands\Cron\Log;
 use Omega\Cron\Schedule;
-use Omega\Integrate\ServiceProvider;
+use Omega\Container\Provider\AbstractServiceProvider;
 use Omega\Security\Hashing\Argon2IdHasher;
 use Omega\Security\Hashing\ArgonHasher;
 use Omega\Security\Hashing\BcryptHasher;
@@ -17,8 +17,11 @@ use Whoops\Handler\PlainTextHandler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends AbstractServiceProvider
 {
+    /**
+     * {@inheritdoc}
+     */
     public function boot(): void
     {
         // error handle

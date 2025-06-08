@@ -7,7 +7,7 @@ namespace App\Providers;
 use DI\DependencyException;
 use DI\NotFoundException;
 use Omega\Http\Response;
-use Omega\Integrate\ServiceProvider;
+use Omega\Container\Provider\AbstractServiceProvider;
 use Omega\Integrate\Vite;
 use Omega\View\Templator;
 use Omega\View\TemplatorFinder;
@@ -15,10 +15,11 @@ use Omega\View\TemplatorFinder;
 use function array_merge;
 use function file_exists;
 
-class ViewServiceProvider extends ServiceProvider
+class ViewServiceProvider extends AbstractServiceProvider
 {
     /**
-     * @return void
+     * {@inheritdoc}
+     *
      * @throws DependencyException
      * @throws NotFoundException
      */
