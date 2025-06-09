@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Part of App (Omega Application) - Commands Package
+ * php version 8.3
+ *
+ * @link      https://omegamvc.github.io
+ * @author    Adriano Giovannini <agisoftt@gmail.com>
+ * @copyright Copyright (c) 2024 - 2025 Adriano Giovannini (https://omegamvc.github.io)
+ * @license   https://www.gnu.org/licenses/gpl-3.0-standalone.html     GPL V3.0+
+ * @version   2.0.0
+ */
+
 declare(strict_types=1);
 
 namespace App\Commands;
@@ -14,8 +25,52 @@ use Omega\Time\Now;
 use function microtime;
 use function round;
 
+/**
+ * Command-line interface for managing cron-related tasks.
+ *
+ * This class defines and handles three main cron operations:
+ * - `cron`       → executes the main scheduler
+ * - `cron:list`  → lists all registered cron jobs
+ * - `cron:work`  → simulates a live cron execution every minute via terminal
+ *
+ * It extends the base `ConsoleCronCommand` provided by the Omega framework.
+ *
+ * @category  App
+ * @package   Commands
+ * @link      https://omegamvc.github.io
+ * @author    Adriano Giovannini <agisoftt@gmail.com>
+ * @copyright Copyright (c) 2024 - 2025 Adriano Giovannini (https://omegamvc.github.io)
+ * @license   https://www.gnu.org/licenses/gpl-3.0-standalone.html     GPL V3.0+
+ * @version   2.0.0
+ */
 class CronCommand extends ConsoleCronCommand
 {
+    /**
+     * Available command patterns and their corresponding method handlers.
+     *
+     * @var array<int, array{pattern: string, fn: array{0: class-string<CronCommand>, 1: string}}>
+     */
+    public static array $command = [
+        [
+            'pattern' => 'cron',
+            'fn'      => [self::class, 'main'],
+        ], [
+            'pattern' => 'cron:list',
+            'fn'      => [self::class, 'list'],
+        ], [
+            'pattern' => 'cron:work',
+            'fn'      => [self::class, 'work'],
+        ],
+    ];
+
+    /**
+     * CronCommand constructor.
+     *
+     * Initializes the base command and sets up the internal logging mechanism.
+     *
+     * @param array<int, string> $argv           The command-line arguments
+     * @param array<string, mixed> $default_option Optional default options
+     */
     public function __construct($argv, $default_option = [])
     {
         parent::__construct($argv, $default_option);
@@ -23,19 +78,9 @@ class CronCommand extends ConsoleCronCommand
         $this->log = new Log();
     }
 
-    public static array $command = [
-        [
-            'pattern'       => 'cron',
-            'fn'            => [self::class, 'main'],
-        ], [
-            'pattern'       => 'cron:list',
-            'fn'            => [self::class, 'list'],
-        ], [
-            'pattern'       => 'cron:work',
-            'fn'            => [self::class, 'work'],
-        ],
-    ];
-
+    /**
+     * {@inheritdoc}
+     */
     public function work(): void
     {
         $print = new Style("\n");
@@ -68,6 +113,9 @@ class CronCommand extends ConsoleCronCommand
         });
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function scheduler(Schedule $schedule): void
     {
         $schedule->call(function () {
@@ -77,7 +125,7 @@ class CronCommand extends ConsoleCronCommand
         })
         ->retry(2)
         ->justInTime()
-        ->animusly()
-        ->eventName('schedule.from.' . __CLASS__);
+        ->anonymously()
+        ->setEventName('schedule.from.' . __CLASS__);
     }
 }

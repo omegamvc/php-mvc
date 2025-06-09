@@ -11,5 +11,5 @@ Schedule::call(static function () {
     ];
 })
     ->everyTenMinute()
-    ->animusly()
-    ->eventName('schedule.from.routes');
+    ->anonymously()
+    ->setEventName('schedule.from.routes');
