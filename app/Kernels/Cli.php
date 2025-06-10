@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use Omega\Integrate\Application;
-use Omega\Integrate\Console\CliKernel;
+use Omega\Console\CliKernel;
 use Whoops\Handler\Handler;
 use Whoops\Handler\PlainTextHandler;
 use Whoops\Run;

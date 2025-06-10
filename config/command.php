@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 use App\Commands\CronCommand;
 use App\Commands\HelpCommand;
-use Omega\Integrate\Console\ClearCacheCommand;
-use Omega\Integrate\Console\ConfigCommand;
-use Omega\Integrate\Console\MaintenanceCommand;
-use Omega\Integrate\Console\MakeCommand;
-use Omega\Integrate\Console\MigrationCommand;
-use Omega\Integrate\Console\PackageDiscoveryCommand;
-use Omega\Integrate\Console\RouteCommand;
-use Omega\Integrate\Console\SeedCommand;
-use Omega\Integrate\Console\ServeCommand;
-use Omega\Integrate\Console\ViewCommand;
+use Omega\Console\Commands\ClearCacheCommand;
+use Omega\Console\Commands\ConfigCommand;
+use Omega\Console\Commands\MaintenanceCommand;
+use Omega\Console\Commands\MakeCommand;
+use Omega\Console\Commands\MigrationCommand;
+use Omega\Console\Commands\PackageDiscoveryCommand;
+use Omega\Console\Commands\RouteCommand;
+use Omega\Console\Commands\SeedCommand;
+use Omega\Console\Commands\ServeCommand;
+use Omega\Console\Commands\ViewCommand;
 
 return [
     'commands' => [

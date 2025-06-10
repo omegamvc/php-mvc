@@ -3,7 +3,7 @@
 
 declare(strict_types=1);
 
-use Omega\Integrate\Console\CliKernel;
+use Omega\Console\CliKernel;
 
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 

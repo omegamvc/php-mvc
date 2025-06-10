@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Commands;
 
-use Omega\Integrate\Console\HelpCommand as ConsoleHelpCommand;
+use Omega\Console\Commands\HelpCommand as ConsoleHelpCommand;
 
 class HelpCommand extends ConsoleHelpCommand
 {
