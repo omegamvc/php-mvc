@@ -8,10 +8,10 @@ use Omega\Integrate\Application;
 
 use function dirname;
 
-trait CreateApplication
+trait CreateApplicationTrait
 {
     public function createApplication(): Application
     {
-        return require dirname(__DIR__) . '/bootstrap/app.php';
+        return require __DIR__ . '/../bootstrap/app.php';
     }
 }

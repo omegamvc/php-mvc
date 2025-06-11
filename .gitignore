@@ -1,6 +1,7 @@
 # Environment
 .env
 A
+c.json
 
 # Cache
 .php-cs-fixer.cache
@@ -31,3 +32,6 @@ composer.lock
 # Logs
 npm-debug.log
 yarn-error.log
+
+# Quality
+phpunit.xml

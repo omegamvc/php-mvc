@@ -6,8 +6,8 @@ use App\Exceptions\Handler;
 use App\Kernels\Cli;
 use App\Kernels\Http;
 use Dotenv\Dotenv;
-use Omega\Integrate\Application;
 use Omega\Console\CliKernel;
+use Omega\Integrate\Application;
 use Omega\Integrate\Exceptions\ExceptionHandler;
 use Omega\Integrate\Http\HttpKernel;
 

@@ -10,7 +10,7 @@ use Whoops\Run;
 
 abstract class TestCase extends IntegrateTastCase
 {
-    use CreateApplication;
+    use CreateApplicationTrait;
 
     protected function setUp(): void
     {

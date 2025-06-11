@@ -35,6 +35,10 @@ class Http extends HttpKernel
                 $this->run
                   ->pushHandler($this->handler)
                   ->register();
+
+                if ('testing' === $this->app->environment()) {
+                    $this->run->unregister();
+                }
             }
         });
     }
