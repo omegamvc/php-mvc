@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Test\Feature;
+namespace Tests\Feature;
 
-use Test\TestCase;
+use Tests\TestCase;
 
 class BasicTest extends TestCase
 {
@@ -15,8 +15,8 @@ class BasicTest extends TestCase
      */
     public function testItCanSeeWelcomePage(): void
     {
-        $response = $this->get('/welcome');
-
-        $response->assertOk();
+        $this
+            ->get('/')
+            ->assertOk();
     }
 }

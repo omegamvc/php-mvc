@@ -1,0 +1,372 @@
+PHPUnit Started (PHPUnit 12.2.1 using PHP 8.3.6 (cli) on Linux)
+Test Runner Configured
+Bootstrap Finished (/home/morpheus/www/php-mvc/tests/bootstrap.php)
+Event Facade Sealed
+Test Suite Loaded (2 tests)
+Test Runner Triggered Warning (XDEBUG_MODE=coverage (environment variable) or xdebug.mode=coverage (PHP configuration setting) has to be set)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (2 tests)
+Test Suite Started (/home/morpheus/www/php-mvc/phpunit.xml, 2 tests)
+Test Suite Started (Omega Test Suite, 2 tests)
+Test Suite Started (Tests\Feature\IndexTest, 1 test)
+Test Preparation Started (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Before Test Method Called (Tests\Feature\IndexTest::setUp)
+Before Test Method Finished:
+- Tests\Feature\IndexTest::setUp
+Test Prepared (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+After Test Method Called (Tests\Feature\IndexTest::tearDown)
+After Test Method Finished:
+- Tests\Feature\IndexTest::tearDown
+Test Passed (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Test Considered Risky (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Test code or tested code did not remove its own error handlers
+Test Considered Risky (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Test code or tested code did not remove its own exception handlers
+Test Printed Unexpected Output
+/home/morpheus/www/php-mvc/tests/Feature/IndexTest.php:27:
+array(2) {
+  'error_handler' =>
+  class PHPUnit\Runner\ErrorHandler#91 (6) {
+    private ?PHPUnit\Runner\Baseline\Baseline $baseline =>
+    NULL
+    private bool $enabled =>
+    bool(true)
+    private ?int $originalErrorReportingLevel =>
+    int(22527)
+    private readonly PHPUnit\TextUI\Configuration\Source $source =>
+    class PHPUnit\TextUI\Configuration\Source#56 (19) {
+      private readonly ?string $baseline =>
+      NULL
+      private readonly bool $ignoreBaseline =>
+      bool(false)
+      private readonly PHPUnit\TextUI\Configuration\FilterDirectoryCollection $includeDirectories =>
+      class PHPUnit\TextUI\Configuration\FilterDirectoryCollection#79 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FileCollection $includeFiles =>
+      class PHPUnit\TextUI\Configuration\FileCollection#46 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FilterDirectoryCollection $excludeDirectories =>
+      class PHPUnit\TextUI\Configuration\FilterDirectoryCollection#49 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FileCollection $excludeFiles =>
+      class PHPUnit\TextUI\Configuration\FileCollection#50 (1) {
+        ...
+      }
+      private readonly bool $restrictNotices =>
+      bool(false)
+      private readonly bool $restrictWarnings =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfDeprecations =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpDeprecations =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfErrors =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfNotices =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpNotices =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfWarnings =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpWarnings =>
+      bool(false)
+      private readonly bool $ignoreSelfDeprecations =>
+      bool(false)
+      private readonly bool $ignoreDirectDeprecations =>
+      bool(false)
+      private readonly bool $ignoreIndirectDeprecations =>
+      bool(false)
+      private readonly array $deprecationTriggers =>
+      array(2) {
+        ...
+      }
+    }
+    private array $globalDeprecations =>
+    array(0) {
+    }
+    private ?array $deprecationTriggers =>
+    array(2) {
+      'functions' =>
+      array(0) {
+        ...
+      }
+      'methods' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  'exception_handler' =>
+  NULL
+}
+/home/morpheus/www/php-mvc/tests/Feature/IndexTest.php:27:
+array(2) {
+  'error_handler' =>
+  array(2) {
+    [0] =>
+    class Whoops\Run#375 (11) {
+      private $isRegistered =>
+      bool(true)
+      private $allowQuit =>
+      bool(true)
+      private $sendOutput =>
+      bool(true)
+      private $sendHttpCode =>
+      int(500)
+      private $sendExitCode =>
+      int(1)
+      private $handlerStack =>
+      array(1) {
+        ...
+      }
+      private $silencedPatterns =>
+      array(0) {
+        ...
+      }
+      private $system =>
+      class Whoops\Util\SystemFacade#374 (0) {
+        ...
+      }
+      private $canThrowExceptions =>
+      bool(true)
+      private $inspectorFactory =>
+      class Whoops\Inspector\InspectorFactory#373 (0) {
+        ...
+      }
+      private $frameFilters =>
+      array(0) {
+        ...
+      }
+    }
+    [1] =>
+    string(11) "handleError"
+  }
+  'exception_handler' =>
+  array(2) {
+    [0] =>
+    class Whoops\Run#375 (11) {
+      private $isRegistered =>
+      bool(true)
+      private $allowQuit =>
+      bool(true)
+      private $sendOutput =>
+      bool(true)
+      private $sendHttpCode =>
+      int(500)
+      private $sendExitCode =>
+      int(1)
+      private $handlerStack =>
+      array(1) {
+        ...
+      }
+      private $silencedPatterns =>
+      array(0) {
+        ...
+      }
+      private $system =>
+      class Whoops\Util\SystemFacade#374 (0) {
+        ...
+      }
+      private $canThrowExceptions =>
+      bool(true)
+      private $inspectorFactory =>
+      class Whoops\Inspector\InspectorFactory#373 (0) {
+        ...
+      }
+      private $frameFilters =>
+      array(0) {
+        ...
+      }
+    }
+    [1] =>
+    string(15) "handleException"
+  }
+}
+
+Test Considered Risky (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Test code or tested code printed unexpected output: /home/morpheus/www/php-mvc/tests/Feature/IndexTest.php:27:
+array(2) {
+  'error_handler' =>
+  class PHPUnit\Runner\ErrorHandler#91 (6) {
+    private ?PHPUnit\Runner\Baseline\Baseline $baseline =>
+    NULL
+    private bool $enabled =>
+    bool(true)
+    private ?int $originalErrorReportingLevel =>
+    int(22527)
+    private readonly PHPUnit\TextUI\Configuration\Source $source =>
+    class PHPUnit\TextUI\Configuration\Source#56 (19) {
+      private readonly ?string $baseline =>
+      NULL
+      private readonly bool $ignoreBaseline =>
+      bool(false)
+      private readonly PHPUnit\TextUI\Configuration\FilterDirectoryCollection $includeDirectories =>
+      class PHPUnit\TextUI\Configuration\FilterDirectoryCollection#79 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FileCollection $includeFiles =>
+      class PHPUnit\TextUI\Configuration\FileCollection#46 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FilterDirectoryCollection $excludeDirectories =>
+      class PHPUnit\TextUI\Configuration\FilterDirectoryCollection#49 (1) {
+        ...
+      }
+      private readonly PHPUnit\TextUI\Configuration\FileCollection $excludeFiles =>
+      class PHPUnit\TextUI\Configuration\FileCollection#50 (1) {
+        ...
+      }
+      private readonly bool $restrictNotices =>
+      bool(false)
+      private readonly bool $restrictWarnings =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfDeprecations =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpDeprecations =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfErrors =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfNotices =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpNotices =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfWarnings =>
+      bool(false)
+      private readonly bool $ignoreSuppressionOfPhpWarnings =>
+      bool(false)
+      private readonly bool $ignoreSelfDeprecations =>
+      bool(false)
+      private readonly bool $ignoreDirectDeprecations =>
+      bool(false)
+      private readonly bool $ignoreIndirectDeprecations =>
+      bool(false)
+      private readonly array $deprecationTriggers =>
+      array(2) {
+        ...
+      }
+    }
+    private array $globalDeprecations =>
+    array(0) {
+    }
+    private ?array $deprecationTriggers =>
+    array(2) {
+      'functions' =>
+      array(0) {
+        ...
+      }
+      'methods' =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  'exception_handler' =>
+  NULL
+}
+/home/morpheus/www/php-mvc/tests/Feature/IndexTest.php:27:
+array(2) {
+  'error_handler' =>
+  array(2) {
+    [0] =>
+    class Whoops\Run#375 (11) {
+      private $isRegistered =>
+      bool(true)
+      private $allowQuit =>
+      bool(true)
+      private $sendOutput =>
+      bool(true)
+      private $sendHttpCode =>
+      int(500)
+      private $sendExitCode =>
+      int(1)
+      private $handlerStack =>
+      array(1) {
+        ...
+      }
+      private $silencedPatterns =>
+      array(0) {
+        ...
+      }
+      private $system =>
+      class Whoops\Util\SystemFacade#374 (0) {
+        ...
+      }
+      private $canThrowExceptions =>
+      bool(true)
+      private $inspectorFactory =>
+      class Whoops\Inspector\InspectorFactory#373 (0) {
+        ...
+      }
+      private $frameFilters =>
+      array(0) {
+        ...
+      }
+    }
+    [1] =>
+    string(11) "handleError"
+  }
+  'exception_handler' =>
+  array(2) {
+    [0] =>
+    class Whoops\Run#375 (11) {
+      private $isRegistered =>
+      bool(true)
+      private $allowQuit =>
+      bool(true)
+      private $sendOutput =>
+      bool(true)
+      private $sendHttpCode =>
+      int(500)
+      private $sendExitCode =>
+      int(1)
+      private $handlerStack =>
+      array(1) {
+        ...
+      }
+      private $silencedPatterns =>
+      array(0) {
+        ...
+      }
+      private $system =>
+      class Whoops\Util\SystemFacade#374 (0) {
+        ...
+      }
+      private $canThrowExceptions =>
+      bool(true)
+      private $inspectorFactory =>
+      class Whoops\Inspector\InspectorFactory#373 (0) {
+        ...
+      }
+      private $frameFilters =>
+      array(0) {
+        ...
+      }
+    }
+    [1] =>
+    string(15) "handleException"
+  }
+}
+
+Test Finished (Tests\Feature\IndexTest::testItCanSeeWelcomePage)
+Test Suite Finished (Tests\Feature\IndexTest, 1 test)
+Test Suite Started (Tests\Unit\BasicTest, 1 test)
+Test Preparation Started (Tests\Unit\BasicTest::testIfAssertTrueIsTrue)
+Before Test Method Called (Tests\Unit\BasicTest::setUp)
+Before Test Method Finished:
+- Tests\Unit\BasicTest::setUp
+Test Prepared (Tests\Unit\BasicTest::testIfAssertTrueIsTrue)
+After Test Method Called (Tests\Unit\BasicTest::tearDown)
+After Test Method Finished:
+- Tests\Unit\BasicTest::tearDown
+Test Passed (Tests\Unit\BasicTest::testIfAssertTrueIsTrue)
+Test Finished (Tests\Unit\BasicTest::testIfAssertTrueIsTrue)
+Test Suite Finished (Tests\Unit\BasicTest, 1 test)
+Test Suite Finished (Omega Test Suite, 2 tests)
+Test Suite Finished (/home/morpheus/www/php-mvc/phpunit.xml, 2 tests)
+Test Runner Execution Finished
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 1)

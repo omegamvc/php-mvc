@@ -55,7 +55,8 @@ class ViewServiceProvider extends AbstractServiceProvider
         $extensions = $this->app->get('config')['VIEW_EXTENSIONS'] ?? [];
 
         $this->app->set(TemplatorFinder::class, fn () => new TemplatorFinder(view_paths(), $extensions));
-        $this->app->set('view.instance',
+        $this->app->set(
+            'view.instance',
             fn () => new Templator($this->app->get(TemplatorFinder::class), compiled_view_path())
         );
         $this->app->set(

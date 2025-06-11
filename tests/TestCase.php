@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Test;
+namespace Tests;
 
+use Omega\Integrate\Application;
 use Omega\Integrate\Testing\TestCase as IntegrateTastCase;
+use Whoops\Run;
 
 abstract class TestCase extends IntegrateTastCase
 {

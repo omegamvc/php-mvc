@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Test\Unit;
+namespace Tests\Unit;
 
-use Test\TestCase;
+use Tests\TestCase;
 
 class BasicTest extends TestCase
 {

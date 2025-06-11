@@ -2,7 +2,7 @@
 <phpunit 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd" 
-	bootstrap="test/bootstrap.php"
+	bootstrap="tests/bootstrap.php"
 	cacheDirectory="cache/phpunit"
 	executionOrder="depends,defects"
 	defaultTestSuite="Omega Test Suite" 
@@ -15,22 +15,23 @@
 	>
   	<testsuites>
     		<testsuite name="Omega Test Suite">
-      			<directory>test</directory>
-      			<directory>vendor/omegamvc/*/tests</directory>
+      			<directory>tests</directory>
     		</testsuite>
   	</testsuites>
+	<php>
+		<env name="APP_ENV" value="testing"/>
+	</php>
   	<source>
     		<include>
       			<directory>app</directory>
-      			<directory>vendor/omegamvc/*/src</directory>
-    		</include>
+			</include>
   	</source>
-  	<!--coverage pathCoverage="true">
+  	<coverage pathCoverage="true">
     		<report>
       			<html outputDirectory="cache/coverage-report"/>
     		</report>
   	</coverage>
   	<logging>
     		<testdoxHtml outputFile="cache/coverage-report/testdox.html"/>
-  	</logging-->
+  	</logging>
 </phpunit>
