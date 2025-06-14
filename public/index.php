@@ -18,7 +18,6 @@ $app = require_once dirname(__DIR__) . '/bootstrap/app.php';
 /** @var HttpKernel $httpKernel Declare the HttpKernel. */
 try {
     $httpKernel = $app->make(HttpKernel::class);
-    var_dump($httpKernel);
 } catch (DependencyException|NotFoundException $e) {
     echo $e->getMessage();
 }
