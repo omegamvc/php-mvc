@@ -1,12 +1,6 @@
 # Environment
 .env
 A
-c.json
-
-# Cache
-.php-cs-fixer.cache
-.phpunit.result.cache
-/.phpunit.cache
 
 # Build output
 /public/build
@@ -15,7 +9,6 @@ c.json
 # Dependencies
 /vendor
 /node_modules
-/cache
 
 # Lock
 package-lock.json
