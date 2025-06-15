@@ -148,7 +148,7 @@ You can start the built-in server with the following command:
 ```bash
 composer serve
 ```
-This command launches the server on the default port 8000.
+This command launches the server on the default port 8080.
 If you want to change the port, you can use:
 ```bash
 composer serve -- --port=YOUR_PORT
