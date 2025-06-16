@@ -11,6 +11,8 @@
   ],
   "require": {
     "php": "^8.3",
+    "ext-pcntl": "*",
+    "ext-posix": "*",
     "omegamvc/php-library": "1.0.0",
     "react/event-loop": "^1.5",
     "vlucas/phpdotenv": "^5.6"

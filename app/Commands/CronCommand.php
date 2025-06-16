@@ -69,11 +69,11 @@ class CronCommand extends ConsoleCronCommand
      * Initializes the base command and sets up the internal logging mechanism.
      *
      * @param array<int, string> $argv           The command-line arguments
-     * @param array<string, mixed> $default_option Optional default options
+     * @param array<string, mixed> $defaultOption Optional default options
      */
-    public function __construct($argv, $default_option = [])
+    public function __construct($argv, $defaultOption = [])
     {
-        parent::__construct($argv, $default_option);
+        parent::__construct($argv, $defaultOption);
 
         $this->log = new Log();
     }
