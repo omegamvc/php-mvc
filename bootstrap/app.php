@@ -9,7 +9,7 @@ use Dotenv\Dotenv;
 use Omega\Console\CliKernel;
 use Omega\Integrate\Application;
 use Omega\Integrate\Exceptions\ExceptionHandler;
-use Omega\Integrate\Http\HttpKernel;
+use Omega\Http\HttpKernel;
 
 Dotenv::createImmutable(dirname(__DIR__))->load();
 

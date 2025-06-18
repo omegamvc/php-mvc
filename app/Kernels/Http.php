@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Kernels;
 
 use Omega\Integrate\Application;
-use Omega\Integrate\Http\HttpKernel;
+use Omega\Http\HttpKernel;
 use Omega\Router\RouteDispatcher;
 use Omega\Router\Router;
 use Whoops\Handler\Handler;
