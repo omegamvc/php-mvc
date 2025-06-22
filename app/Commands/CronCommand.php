@@ -80,6 +80,7 @@ class CronCommand extends ConsoleCronCommand
 
     /**
      * {@inheritdoc}
+     * @noinspection DuplicatedCode
      */
     public function work(): void
     {
