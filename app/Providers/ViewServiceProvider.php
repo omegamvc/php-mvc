@@ -8,7 +8,7 @@ use DI\DependencyException;
 use DI\NotFoundException;
 use Omega\Http\Response;
 use Omega\Container\Provider\AbstractServiceProvider;
-use Omega\Integrate\Vite;
+use Omega\Support\Vite;
 use Omega\View\Templator;
 use Omega\View\TemplatorFinder;
 
