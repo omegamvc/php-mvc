@@ -7,12 +7,13 @@ use App\Kernels\Cli;
 use App\Kernels\Http;
 use Dotenv\Dotenv;
 use Omega\Console\CliKernel;
-use Omega\Integrate\Application;
+use Omega\Application\Application;
 use Omega\Integrate\Exceptions\ExceptionHandler;
 use Omega\Http\HttpKernel;
 
 Dotenv::createImmutable(dirname(__DIR__))->load();
 
+//$app = Application::getInstance($_ENV['APP_BASE_PATH'] ?? dirname(__DIR__));
 $app = new Application(dirname(__DIR__));
 
 $app->set(

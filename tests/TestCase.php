@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use Omega\Integrate\Application;
+use Omega\Application\Application;
 use Omega\Integrate\Testing\TestCase as IntegrateTastCase;
 use Whoops\Run;
 
