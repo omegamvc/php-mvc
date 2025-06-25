@@ -17,6 +17,8 @@ use Whoops\Handler\PlainTextHandler;
 use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 
+use function Omega\Time\now;
+
 class AppServiceProvider extends AbstractServiceProvider
 {
     /**

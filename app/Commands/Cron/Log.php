@@ -19,7 +19,7 @@ use Omega\Cron\InterpolateInterface;
 use Omega\Support\Facades\DB;
 
 use function json_encode;
-use function now;
+use function Omega\Time\now;
 
 /**
  * Logger implementation for scheduled Cron events.
