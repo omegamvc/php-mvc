@@ -1,57 +1,60 @@
 {
-  "name": "omegamvc/php-mvc",
-  "description": "Very light php mvc, include cli easier to creat controller view and model quickly ",
-  "type": "project",
-  "license": "LGPL-3.0-or-later",
-  "authors": [
-    {
-      "name": "Adriano Giovannini",
-      "email": "agisoftt@gmail.com"
-    }
-  ],
-  "require": {
-    "php": "^8.3",
-    "ext-http": "*",
-    "ext-pcntl": "*",
-    "ext-posix": "*",
-    "ext-readline": "*",
-    "omegamvc/php-library": "1.0.0",
-    "react/event-loop": "^1.5",
-    "vlucas/phpdotenv": "^5.6"
-  },
-  "require-dev": {
-    "filp/whoops": "^2.18",
-    "phpunit/phpunit": "^12.2",
-    "squizlabs/php_codesniffer": "^3.13"
-  },
-  "autoload": {
-    "psr-4": {
-        "App\\" : "app/",
-        "Database\\Seeders\\": "database/seeders/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-        "Tests\\": "tests/"
-    }
-  },
-  "scripts": {
-    "serve": "php omega serve",
-    "phpunit": "vendor/bin/phpunit",
-    "phpcs": "vendor/bin/phpcs",
-    "phpcbf": "vendor/bin/phpcbf --standard=PSR12",
-    "post-root-package-install": [
-        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ]
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true,
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+    "name": "omegamvc/php-mvc",
+    "description": "Very light php mvc, include cli easier to creat controller view and model quickly ",
+    "type": "project",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Adriano Giovannini",
+            "email": "agisoftt@gmail.com"
+        }
+    ],
+    "require": {
+      "php": "^8.3",
+      "ext-http": "*",
+      "ext-intl": "*",
+      "ext-mbstring": "*",
+      "ext-openssl": "*",
+      "ext-pcntl": "*",
+      "ext-posix": "*",
+      "ext-readline": "*",
+      "omegamvc/php-library": "1.0.0",
+      "react/event-loop": "^1.5",
+      "vlucas/phpdotenv": "^5.6"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.18",
+        "phpunit/phpunit": "^12.2",
+        "squizlabs/php_codesniffer": "^3.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\" : "app/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "serve": "php omega serve",
+        "phpunit": "vendor/bin/phpunit",
+        "phpcs": "vendor/bin/phpcs",
+        "phpcbf": "vendor/bin/phpcbf --standard=PSR12",
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
