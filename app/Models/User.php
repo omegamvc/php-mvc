@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use Omega\Database\MyModel\Model;
+use Omega\Database\Model\Model;
 
 /**
  * @property string|null $user
