@@ -6,10 +6,10 @@ namespace App\Providers;
 
 use DI\DependencyException;
 use DI\NotFoundException;
-use Omega\Database\MyPDO;
-use Omega\Database\MyQuery;
-use Omega\Database\MySchema;
-use Omega\Database\MySchema\SchemaConnection;
+use Omega\Database\Connection;
+use Omega\Database\Query\Query;
+use Omega\Database\Schema\Schema;
+use Omega\Database\Schema\SchemaConnection;
 use Omega\Container\Provider\AbstractServiceProvider;
 
 class DatabaseServiceProvider extends AbstractServiceProvider
@@ -33,8 +33,8 @@ class DatabaseServiceProvider extends AbstractServiceProvider
         $this->app->set('dsn.sql', $sqlDsn);
 
         $this->app->set(
-            MyPDO::class,
-            fn () => new MyPDO($sqlDsn)
+            Connection::class,
+            fn () => new Connection($sqlDsn)
         );
 
         $this->app->set(
@@ -43,13 +43,13 @@ class DatabaseServiceProvider extends AbstractServiceProvider
         );
 
         $this->app->set(
-            'MyQuery',
-            fn () => new MyQuery($this->app->get(MyPDO::class))
+            'Query',
+            fn () => new Query($this->app->get(Connection::class))
         );
 
         $this->app->set(
-            'MySchema',
-            fn () => new MySchema($this->app->get(SchemaConnection::class))
+            'Schema',
+            fn () => new Schema($this->app->get(SchemaConnection::class))
         );
     }
 }

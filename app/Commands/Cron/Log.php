@@ -16,7 +16,7 @@ declare(strict_types=1);
 namespace App\Commands\Cron;
 
 use Omega\Cron\InterpolateInterface;
-use Omega\Support\Facades\DB;
+use Omega\Support\Facades\Query;
 
 use function json_encode;
 use function Omega\Time\now;
@@ -45,7 +45,7 @@ class Log implements InterpolateInterface
      */
     public function interpolate(string $message, array $context = []): void
     {
-        DB::table('cron')
+        Query::table('cron')
             ->insert()
             ->values([
                 'message'     => $message,
