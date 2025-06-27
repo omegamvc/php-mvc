@@ -9,6 +9,7 @@ use DI\NotFoundException;
 use Omega\Database\MyPDO;
 use Omega\Database\MyQuery;
 use Omega\Database\MySchema;
+use Omega\Database\MySchema\SchemaConnection;
 use Omega\Container\Provider\AbstractServiceProvider;
 
 class DatabaseServiceProvider extends AbstractServiceProvider
@@ -37,8 +38,8 @@ class DatabaseServiceProvider extends AbstractServiceProvider
         );
 
         $this->app->set(
-            MySchema\MyPDO::class,
-            fn () => new MySchema\MyPDO($sqlDsn)
+            SchemaConnection::class,
+            fn () => new SchemaConnection($sqlDsn)
         );
 
         $this->app->set(
@@ -48,7 +49,7 @@ class DatabaseServiceProvider extends AbstractServiceProvider
 
         $this->app->set(
             'MySchema',
-            fn () => new MySchema($this->app->get(MySchema\MyPDO::class))
+            fn () => new MySchema($this->app->get(SchemaConnection::class))
         );
     }
 }
