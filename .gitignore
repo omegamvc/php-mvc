@@ -29,3 +29,5 @@ yarn-error.log
 
 # Quality
 phpunit.xml
+phpcs.xml
+phpstan.neon
