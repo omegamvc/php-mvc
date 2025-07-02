@@ -18,6 +18,7 @@ return [
     'BCRYPT_ROUNDS'     => $_ENV['BCRYPT_ROUNDS'] ?? 12,
     'CONFIG_STORAGE'    => $_ENV['file'] ?? 'file',
 
+    'TEST_PATH'             => 'Generato da config/app.php',
     'COMMAND_PATH'          => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Commands' . DIRECTORY_SEPARATOR,
     'CONTROLLER_PATH'       => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR,
     'MODEL_PATH'            => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Models' . DIRECTORY_SEPARATOR,
