@@ -24,10 +24,7 @@
         "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
-        "filp/whoops": "^2.18",
-        "friendsofphp/php-cs-fixer": "^3.76",
-        "phpunit/phpunit": "^12.2",
-        "squizlabs/php_codesniffer": "^3.13"
+        "filp/whoops": "^2.18"
     },
     "autoload": {
         "psr-4": {
@@ -42,9 +39,6 @@
     },
     "scripts": {
         "serve": "php omega serve",
-        "phpunit": "vendor/bin/phpunit",
-        "phpcs": "vendor/bin/phpcs",
-        "phpcbf": "vendor/bin/phpcbf --standard=PSR12",
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
