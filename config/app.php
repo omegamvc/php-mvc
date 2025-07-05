@@ -7,6 +7,7 @@ use App\Providers\CacheServiceProvider;
 use App\Providers\DatabaseServiceProvider;
 use App\Providers\RouteServiceProvider;
 use App\Providers\ViewServiceProvider;
+use Omega\Support\Path;
 
 return [
     'BASEURL'           => env('BASEURL', 'http://localhost:8080'),
@@ -18,7 +19,8 @@ return [
     'BCRYPT_ROUNDS'     => env('BCRYPT_ROUNDS', 12),
     'CONFIG_STORAGE'    => env('file', 'file'),
 
-    'CACHE_VIEW_PATH'       => DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR,
+    'VIEW_PATH'         => Path::getPath('resources.views'),
+    'CACHE_VIEW_PATH'   => Path::getPath('storage.app.view'),
 
     'PROVIDERS'         => [
         AppServiceProvider::class,
