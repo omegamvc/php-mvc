@@ -15,8 +15,10 @@ declare(strict_types=1);
 
 namespace App\Commands\Cron;
 
+use DateInvalidTimeZoneException;
+use DateMalformedStringException;
 use Omega\Cron\InterpolateInterface;
-use Omega\Support\Facades\Query;
+use Omega\Support\Facades\DB;
 
 use function json_encode;
 use function Omega\Time\now;
@@ -42,10 +44,13 @@ class Log implements InterpolateInterface
 {
     /**
      * {@inheritdoc}
+     *
+     * @throws DateInvalidTimeZoneException
+     * @throws DateMalformedStringException
      */
     public function interpolate(string $message, array $context = []): void
     {
-        Query::table('cron')
+        DB::table('cron')
             ->insert()
             ->values([
                 'message'     => $message,
