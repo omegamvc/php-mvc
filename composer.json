@@ -9,6 +9,12 @@
       "email": "agisoftt@gmail.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/omegamvc/php-library.git"
+    }
+  ],
   "require": {
     "php": "^8.0",
     "omegamvc/php-library": "dev-omega-fork",
@@ -55,6 +61,6 @@
       "preferred-install": "dist",
       "sort-packages": true
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true
 }
