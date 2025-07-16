@@ -29,3 +29,7 @@ composer.lock
 # Logs
 npm-debug.log
 yarn-error.log
+
+# Other
+.phpactor.json
+phpactor
