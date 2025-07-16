@@ -1,12 +1,12 @@
 {
-  "name": "sonypradana/php-mvc",
+  "name": "omegamvc/php-mvc",
   "description": "Very light php mvc, include cli easyer to creat controller view and model quikly ",
   "type": "project",
   "license": "MIT",
   "authors": [
     {
-      "name": "Angger Pradana",
-      "email": "sonypradana@gmail.com"
+      "name": "Adriano Giovannini",
+      "email": "agisoftt@gmail.com"
     }
   ],
   "require": {
