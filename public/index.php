@@ -9,9 +9,9 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 /**
  * Load Application instan.
  *
- * @var System\Integrate\Applicationn
+ * @var System\Integrate\Application
  */
-$app = require_once dirname(__DIR__) . '/bootstrap/init.php';
+$app = require_once dirname(__DIR__) . '/bootstrap/app.php';
 
 /**
  * Declare http karnel.
