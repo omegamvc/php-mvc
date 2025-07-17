@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'BASEURL'           => $_ENV['BASEURL'] ?? 'http://localhost',
-    'time_zone'         => 'Asia/Jakarta',
-    'APP_KEY'           => $_ENV['APP_KEY'] ?? '',
-    'ENVIRONMENT'       => $_ENV['ENVIRONMENT'] ?? $_ENV['APP_ENV'] ?? 'dev',
-    'APP_DEBUG'         => $_ENV['APP_DEBUG'],
+    'BASEURL'           => env('BASEURL', 'http://localhost'),
+    'TIMEZONE'          => env('TIME_ZONE', ''),
+    'APP_KEY'           => env('APP_KEY', ''),
+    'ENVIRONMENT'       => env('APP_ENV', 'dev'),
+    'APP_DEBUG'         => env('APP_DEBUG', ''),
 
-    'BCRYPT_ROUNDS'     => $_ENV['BCRYPT_ROUNDS'] ?? 12,
-    'CONFIG_STORAGE'    => $_ENV['file'] ?? 'file',
+    'BCRYPT_ROUNDS'     => env('BCRYPT_ROUNDS', 12),
+    'CONFIG_STORAGE'    => env('file', 'file'),
 
-    'COMMNAD_PATH'          => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Commands' . DIRECTORY_SEPARATOR,
+    'COMMAND_PATH'          => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Commands' . DIRECTORY_SEPARATOR,
     'CONTROLLER_PATH'       => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR,
     'MODEL_PATH'            => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Models' . DIRECTORY_SEPARATOR,
     'MIDDLEWARE'            => DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Middlewares' . DIRECTORY_SEPARATOR,

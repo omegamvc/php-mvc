@@ -3,8 +3,9 @@
 use App\Exceptions\Handler;
 use App\Kernels\ConsoleKernel;
 use App\Kernels\HttpKernel;
+use System\Environment\Dotenv;
 
-Dotenv\Dotenv::createImmutable(dirname(__DIR__))->load();
+Dotenv::load(dirname(__DIR__));
 
 $app = new System\Integrate\Application(dirname(__DIR__));
 

@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'CACHE_STORAGE' => $_ENV['CACHE_STORAGE'] ?? 'file',
+    'CACHE_STORAGE' => env('CACHE_STORAGE', 'file'),
 
     // redis driver
-    'REDIS_HOST' => $_ENV['REDIS_HOST'] ?? '127.0.0.1',
-    'REDIS_PASS' => $_ENV['REDIS_PASS'] ?? '',
-    'REDIS_PORT' => $_ENV['REDIS_PORT'] ?? 6379,
+    'REDIS_HOST' => env('REDIS_HOST', '127.0.0.1'),
+    'REDIS_PASS' => env('REDIS_PASS', ''),
+    'REDIS_PORT' => env('REDIS_PORT', 6379),
 
     // memcahe
-    'MEMCACHED_HOST' => $_ENV['MEMCACHED_HOST'] ?? '127.0.0.1',
-    'MEMCACHED_PASS' => $_ENV['MEMCACHED_PASS'] ?? '',
-    'MEMCACHED_PORT' => $_ENV['MEMCACHED_PORT'] ?? 6379,
+    'MEMCACHED_HOST' => env('MEMCACHED_HOST', '127.0.0.1'),
+    'MEMCACHED_PASS' => env('MEMCACHED_PASS', ''),
+    'MEMCACHED_PORT' => env('MEMCACHED_PORT', 6379),
 ];
