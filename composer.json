@@ -21,6 +21,7 @@
   ],
   "require": {
     "php": "^8.3",
+      "ext-http": "*",
     "sonypradana/php-library": "dev-omega-fork",
     "sonypradana/validator": "dev-omega-fork",
     "react/event-loop": "^1.5"
