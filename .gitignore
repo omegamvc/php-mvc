@@ -19,9 +19,7 @@ package-lock.json
 yarn.lock
 pnpm-lock.yaml
 composer.lock
-
-# Visual Studio Code configs
-/.vscode
+phpunit.xml
 
 # JetBrains IDEs
 /.idea
@@ -29,7 +27,3 @@ composer.lock
 # Logs
 npm-debug.log
 yarn-error.log
-
-# Other
-.phpactor.json
-phpactor
