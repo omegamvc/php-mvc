@@ -7,7 +7,7 @@ use System\Environment\Dotenv;
 
 Dotenv::load(dirname(__DIR__));
 
-$app = new System\Integrate\Application(dirname(__DIR__));
+$app = new System\Application\Application(dirname(__DIR__));
 
 $app->set(
     System\Integrate\Http\Karnel::class,
