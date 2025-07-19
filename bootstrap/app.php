@@ -3,11 +3,12 @@
 use App\Exceptions\Handler;
 use App\Kernels\ConsoleKernel;
 use App\Kernels\HttpKernel;
+use System\Application\Application;
 use System\Environment\Dotenv;
 
 Dotenv::load(dirname(__DIR__));
 
-$app = new System\Application\Application(dirname(__DIR__));
+$app = new Application(dirname(__DIR__));
 
 $app->set(
     System\Integrate\Http\Karnel::class,
